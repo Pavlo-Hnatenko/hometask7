@@ -1,11 +1,11 @@
 package ua.com.alevel.nix.pavlohnatenko.hometask7.data;
 
-public class Earth extends AbstractPlanet {
+public class Earth extends AbstractPlanet{
 
     private static Earth earth;
 
     private Earth() {
-        super("Earth", 5.972e24, 6371);
+        super("Earth", 5.972e24, 6.371e6);
     }
 
     public static Earth getInstance() {
