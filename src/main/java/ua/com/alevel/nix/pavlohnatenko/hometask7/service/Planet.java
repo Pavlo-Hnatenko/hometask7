@@ -1,11 +1,12 @@
 package ua.com.alevel.nix.pavlohnatenko.hometask7.service;
 
 import ua.com.alevel.nix.pavlohnatenko.hometask7.data.AbstractPlanet;
-import ua.com.alevel.nix.pavlohnatenko.hometask7.util.GravityUtil;
 
 public interface Planet {
-    static double getGravityAcceleration(){
-        return GravityUtil.getGravitationalConstant() * (AbstractPlanet.getMASS() / Math.pow(AbstractPlanet.getRADIUS(), 2));
+    double GRAVITATIONAL_CONSTANT = 6.67430e11;
+
+    static double getGravityAcceleration(AbstractPlanet planet){
+        return GRAVITATIONAL_CONSTANT * (planet.getmass() / Math.pow(planet.getradius(), 2));
     }
 
 }

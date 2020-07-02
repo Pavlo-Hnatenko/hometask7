@@ -1,14 +1,29 @@
 package ua.com.alevel.nix.pavlohnatenko.hometask7.data;
 
-public abstract class AbstractPlanet {
-    private static double MASS;
-    private static double RADIUS;
+import ua.com.alevel.nix.pavlohnatenko.hometask7.service.Planet;
 
-    public static double getMASS() {
-        return MASS;
+public abstract class AbstractPlanet implements Planet {
+
+    protected String planetName;
+    protected double mass;
+    protected double radius;
+
+    protected AbstractPlanet(String planetName, double mass, double radius) {
+        this.planetName = planetName;
+        this.mass = mass;
+        this.radius = radius;
     }
 
-    public static double getRADIUS() {
-        return RADIUS;
+    public String getplanetName() {
+        return planetName;
     }
+
+    public double getmass() {
+        return mass;
+    }
+
+    public double getradius() {
+        return radius;
+    }
+
 }
